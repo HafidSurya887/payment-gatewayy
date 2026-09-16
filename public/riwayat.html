@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-background": "#0b1c30", "surface-container-low": "#eff4ff", "on-primary-fixed": "#00174b", "surface-container-lowest": "#ffffff", "inverse-surface": "#213145", "error": "#ba1a1a", "tertiary-fixed": "#ffddb8", "on-tertiary-container": "#ffeedd", "primary": "#004ac6", "surface-container-highest": "#d3e4fe", "secondary-fixed": "#dce1ff", "outline": "#737686", "on-tertiary": "#ffffff", "primary-fixed": "#dbe1ff", "on-primary-container": "#eeefff", "on-surface": "#0b1c30", "surface-tint": "#0053db", "error-container": "#ffdad6", "on-error-container": "#93000a", "background": "#f8f9ff", "on-tertiary-fixed-variant": "#653e00", "on-secondary-container": "#fffbff", "inverse-primary": "#b4c5ff", "surface-variant": "#d3e4fe", "surface-container-high": "#dce9ff", "on-error": "#ffffff", "on-primary-fixed-variant": "#003ea8", "tertiary-fixed-dim": "#ffb95f", "secondary-container": "#4069f2", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "primary-fixed-dim": "#b4c5ff", "on-surface-variant": "#434655", "primary-container": "#2563eb", "tertiary": "#784b00", "surface-dim": "#cbdbf5", "secondary-fixed-dim": "#b7c4ff", "on-secondary-fixed-variant": "#0039b5", "outline-variant": "#c3c6d7", "surface": "#f8f9ff", "on-tertiary-fixed": "#2a1700", "surface-bright": "#f8f9ff", "tertiary-container": "#996100", "secondary": "#1d4ed8", "on-secondary-fixed": "#001551" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "gutter": "1rem", "margin": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "currency-display": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "code-mono": ["Inter"] }, fontSize: { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "fontWeight": "700" }], "headline-lg-mobile": ["1.625rem", { "lineHeight": "2.125rem", "fontWeight": "700" }], "headline-sm": ["1.125rem", { "lineHeight": "1.625rem", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-md": ["1.375rem", { "lineHeight": "1.875rem", "fontWeight": "700" }], "currency-display": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "code-mono": ["0.8125rem", { "lineHeight": "1.125rem", "letterSpacing": "0.03em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between max-w-lg mx-auto w-full"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">qr_code_2</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">QRIS Gateway</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LIVE</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Riwayat</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifikasi" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full max-w-lg mx-auto px-gutter pt-16 pb-24 bg-surface"><div class="flex flex-col w-full gap-space-md">
+<!-- Interactive Toast Notification -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-full shadow-lg flex items-center gap-space-xs transition-all duration-300 opacity-0 pointer-events-none -translate-y-2" id="copyToast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">TRX-ID disalin</span>
+</div>
+<!-- Gateway Status Banner -->
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[24px]">sync_alt</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Real-time Settlement</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Auto Dynamic CRC16</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+      Aktif
+    </span>
+</div>
+<!-- Metric Summary Cards -->
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<!-- Card 1: Total Masuk -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-surface-container-high rounded-full opacity-40"></div>
+<div class="flex items-center gap-1.5 text-on-surface-variant mb-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">account_balance_wallet</span>
+<span class="font-label-md text-label-md truncate">Total Masuk</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight" id="metricTotalMasuk">Rp 0</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-primary" id="metricSuccessCount">0 transaksi</span>
+<span class="font-body-sm text-body-sm">sukses</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Menunggu Pembayaran -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-tertiary-fixed rounded-full opacity-30"></div>
+<div class="flex items-center gap-1.5 text-on-surface-variant mb-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">hourglass_top</span>
+<span class="font-label-md text-label-md truncate">Menunggu Bayar</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-tertiary tracking-tight" id="metricPending">Rp 0</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-tertiary" id="metricPendingCount">0 transaksi</span>
+<span class="font-body-sm text-body-sm">pending</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex flex-col gap-space-sm">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none placeholder:text-outline focus:bg-surface-container-low transition-colors" id="trxSearchInput" placeholder="Cari TRX-ID, invoice, atau nominal..." type="text"/>
+<button aria-label="Bersihkan pencarian" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-0.5" id="filterChipContainer">
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors bg-primary text-on-primary shadow-sm flex-shrink-0" data-filter="all">
+        Semua (<span id="countAll">0</span>)
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface flex-shrink-0" data-filter="success">
+        Berhasil (<span id="countSuccess">0</span>)
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface flex-shrink-0" data-filter="pending">
+        Pending (<span id="countPending">0</span>)
+      </button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-colors bg-surface-container-high text-on-surface-variant hover:text-on-surface flex-shrink-0" data-filter="expired">
+        Kadaluarsa (<span id="countExpired">0</span>)
+      </button>
+</div>
+</div>
+<!-- Transaction List Section -->
+<div class="flex flex-col gap-space-md" id="transactionList"></div>
+<!-- Empty State Search Filter -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-xl shadow-sm text-center flex-col items-center justify-center gap-space-sm my-space-md" id="emptySearchState">
+<div class="w-14 h-14 rounded-full bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Transaksi Tidak Ditemukan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs mx-auto">
+        Tidak ada transaksi dengan kata kunci tersebut. Coba ganti kata kunci atau pilih tab filter lainnya.
+      </p>
+</div>
+<button class="mt-2 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" id="resetSearchBtn">
+      Reset Pencarian
+    </button>
+</div>
+<!-- Floating Sticky Action Bar: Export & Recap -->
+<div class="sticky bottom-20 z-30 flex items-center justify-between p-space-sm rounded-2xl bg-surface-container-lowest shadow-[0_8px_24px_rgba(11,28,48,0.12)]">
+<div class="flex items-center gap-space-sm pl-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface leading-tight">Rekap Transaksi</span>
+<span class="font-body-sm text-body-sm text-outline">Format CSV / Excel</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3.5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-secondary transition-colors flex items-center gap-1.5" id="downloadCsvBtn">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+<span>Unduh CSV</span>
+</button>
+</div>
+</div>
+<!-- Detail Bottom Modal Sheet (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-end justify-center" id="detailModalBackdrop">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl shadow-xl p-space-md flex flex-col gap-space-md transform translate-y-full transition-transform duration-300" id="detailModalSheet">
+<div class="w-12 h-1.5 bg-outline-variant rounded-full mx-auto"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Validasi CRC16 &amp; Detail</h4>
+<span class="font-code-mono text-code-mono text-outline" id="modalTrxId">TRX-ID: -</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Merchant Nama</span>
+<span class="font-label-md text-label-md text-on-surface" id="modalMerchantName">QRIS GATEWAY ENGINE</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">National Merchant ID (NMID)</span>
+<span class="font-code-mono text-code-mono text-on-surface" id="modalNmid">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Algoritma CRC16</span>
+<span class="font-code-mono text-code-mono text-primary font-bold" id="modalCrc">-</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Dynamic Payload</span>
+<span class="font-label-sm text-label-sm text-on-surface" id="modalPayload">-</span>
+</div>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm" id="modalActionBtn">
+        Tutup Tampilan
+      </button>
+</div>
+</div>
+</div>
+</main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(15,23,42,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 max-w-lg mx-auto px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-full text-on-surface-variant transition-colors hover:text-primary" data-path="buat-qr" href="buat-qr.html"><span class="material-symbols-outlined text-[22px]">qr_code_scanner</span><span class="font-label-sm text-label-sm mt-0.5">Buat QR</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-full transition-colors text-primary font-bold" data-path="riwayat" href="riwayat.html"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm mt-0.5">Riwayat</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-full text-on-surface-variant transition-colors hover:text-primary" data-path="akun-login" href="login.html"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-sm text-label-sm mt-0.5">Akun / Login</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] h-full text-on-surface-variant transition-colors hover:text-primary" data-path="bantuan" href="bantuan.html"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-sm text-label-sm mt-0.5">Bantuan</span></a></div></nav>
+<script src="app-common.js"></script>
+<script>
+(function() {
+  requireAuth(); // redirect ke login.html kalau belum login
+
+  let allTrx = [];
+  let currentFilter = 'all';
+
+  const toast = document.getElementById('copyToast');
+  const toastMsg = document.getElementById('toastMessage');
+  let toastTimeout;
+  function showToast(text) {
+    if (!toast) return;
+    if (toastMsg) toastMsg.textContent = text;
+    toast.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2200);
+  }
+
+  function fmtRupiah(n) {
+    return 'Rp ' + Number(n || 0).toLocaleString('id-ID');
+  }
+
+  function fmtTanggal(iso) {
+    if (!iso) return '-';
+    const d = new Date(iso);
+    return d.toLocaleDateString('id-ID', { day: '2-digit', month: 'short' }) + ', ' +
+      d.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  const statusMeta = {
+    pending: { label: 'Pending', headerClass: 'bg-primary text-on-primary', badgeClass: 'bg-tertiary-fixed text-on-tertiary-fixed-variant', icon: 'qr_code_2' },
+    success: { label: 'Berhasil', headerClass: 'bg-surface-container-high text-on-surface', badgeClass: 'bg-surface-container-highest text-primary', icon: 'check_circle' },
+    expired: { label: 'Kadaluarsa', headerClass: 'bg-surface-container text-on-surface-variant', badgeClass: 'bg-error-container text-on-error-container', icon: 'timer_off' },
+  };
+
+  function renderCard(trx) {
+    const meta = statusMeta[trx.status] || statusMeta.pending;
+    const search = [trx.orderId, trx.description, trx.uniqueAmount, trx.baseAmount].join(' ').toLowerCase();
+
+    if (trx.status === 'pending') {
+      const expiresAt = new Date(trx.expiresAt).getTime();
+      return `
+        <div class="trx-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-transform active:scale-[0.99]" data-search="${search}" data-status="pending">
+          <div class="${meta.headerClass} px-space-md py-2.5 flex items-center justify-between">
+            <div class="flex items-center gap-space-xs min-w-0">
+              <span class="material-symbols-outlined text-[18px]">${meta.icon}</span>
+              <span class="font-code-mono text-code-mono truncate">${trx.orderId}</span>
+              <button aria-label="Salin TRX-ID" class="copy-btn p-1 rounded hover:bg-primary-container text-on-primary transition-colors flex items-center" data-copy="${trx.orderId}">
+                <span class="material-symbols-outlined text-[14px]">content_copy</span>
+              </button>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full ${meta.badgeClass} font-label-sm text-label-sm uppercase font-bold tracking-wider">${meta.label}</span>
+          </div>
+          <div class="p-space-md flex flex-col gap-space-sm">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant block">${trx.description || 'Pembayaran QRIS'}</span>
+                <div class="font-currency-display text-currency-display text-on-surface mt-0.5 font-bold">${fmtRupiah(trx.uniqueAmount)}</div>
+              </div>
+              <div class="flex flex-col items-end">
+                <span class="font-label-sm text-label-sm text-error flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">schedule</span>
+                  <span class="countdown-live" data-expires="${expiresAt}">--:--</span>
+                </span>
+                <span class="font-body-sm text-body-sm text-outline mt-0.5">Sisa Waktu</span>
+              </div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-tertiary-fixed/30 flex items-start gap-2 text-on-tertiary-fixed-variant">
+              <span class="material-symbols-outlined text-tertiary text-[18px] flex-shrink-0 mt-0.5">warning</span>
+              <p class="font-body-sm text-body-sm leading-snug">Nominal unik <strong>${fmtRupiah(trx.uniqueAmount)}</strong>. Transfer pas sampai digit terakhir untuk verifikasi otomatis.</p>
+            </div>
+            <div class="flex items-center justify-between pt-space-xs mt-1">
+              <span class="font-label-sm text-label-sm text-outline">Metode: Dinamis QRIS 2.0</span>
+              <button class="detail-btn px-3 py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1" data-trx="${trx.orderId}">
+                <span>Detail &amp; CRC16</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    if (trx.status === 'success') {
+      return `
+        <div class="trx-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-transform active:scale-[0.99]" data-search="${search}" data-status="success">
+          <div class="${meta.headerClass} px-space-md py-2.5 flex items-center justify-between">
+            <div class="flex items-center gap-space-xs min-w-0">
+              <span class="material-symbols-outlined text-[18px] text-primary">${meta.icon}</span>
+              <span class="font-code-mono text-code-mono text-on-surface truncate">${trx.orderId}</span>
+              <button aria-label="Salin TRX-ID" class="copy-btn p-1 rounded hover:bg-surface-container-highest text-on-surface-variant transition-colors flex items-center" data-copy="${trx.orderId}">
+                <span class="material-symbols-outlined text-[14px]">content_copy</span>
+              </button>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full ${meta.badgeClass} font-label-sm text-label-sm uppercase font-bold tracking-wider">${meta.label}</span>
+          </div>
+          <div class="p-space-md flex flex-col gap-space-sm">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant block">${trx.description || 'Pembayaran QRIS'}</span>
+                <div class="font-currency-display text-currency-display text-on-surface mt-0.5 font-bold">${fmtRupiah(trx.uniqueAmount)}</div>
+              </div>
+              <div class="flex flex-col items-end">
+                <span class="font-label-md text-label-md text-on-surface">${fmtTanggal(trx.paidAt || trx.createdAt)}</span>
+                <span class="font-body-sm text-body-sm text-outline">WIB</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-on-surface-variant">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-primary">account_balance</span>
+                <span class="font-label-sm text-label-sm">${trx.channel || 'QRIS'} • Settlement Instan</span>
+              </div>
+              <span class="font-code-mono text-code-mono text-on-surface-variant text-[11px]">RRN: ${trx.rrn || '-'}</span>
+            </div>
+            <div class="flex items-center justify-between pt-space-xs mt-1">
+              <span class="font-label-sm text-label-sm text-outline">Fee: Rp 0 (NMID Terverifikasi)</span>
+              <button class="detail-btn px-3 py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1" data-trx="${trx.orderId}">
+                <span>Detail &amp; CRC16</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // expired
+    return `
+      <div class="trx-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden opacity-85 transition-transform active:scale-[0.99]" data-search="${search}" data-status="expired">
+        <div class="${meta.headerClass} px-space-md py-2.5 flex items-center justify-between">
+          <div class="flex items-center gap-space-xs min-w-0">
+            <span class="material-symbols-outlined text-[18px] text-outline">${meta.icon}</span>
+            <span class="font-code-mono text-code-mono truncate">${trx.orderId}</span>
+            <button aria-label="Salin TRX-ID" class="copy-btn p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors flex items-center" data-copy="${trx.orderId}">
+              <span class="material-symbols-outlined text-[14px]">content_copy</span>
+            </button>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full ${meta.badgeClass} font-label-sm text-label-sm uppercase font-bold tracking-wider">${meta.label}</span>
+        </div>
+        <div class="p-space-md flex flex-col gap-space-sm">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="font-body-sm text-body-sm text-on-surface-variant block">${trx.description || 'Pembayaran QRIS'}</span>
+              <div class="font-currency-display text-currency-display text-outline mt-0.5 font-bold line-through">${fmtRupiah(trx.uniqueAmount)}</div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="font-label-md text-label-md text-outline">${fmtTanggal(trx.createdAt)}</span>
+              <span class="font-body-sm text-body-sm text-outline">Batas Lewat</span>
+            </div>
+          </div>
+          <div class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-outline">info</span>
+            <span class="font-body-sm text-body-sm">Pembayaran tidak diselesaikan dalam 10 menit. QR dibatalkan otomatis.</span>
+          </div>
+          <div class="flex items-center justify-between pt-space-xs mt-1">
+            <span class="font-label-sm text-label-sm text-outline">Daur Ulang: Siap Digunakan</span>
+            <button class="detail-btn px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1" data-trx="${trx.orderId}">
+              <span>Detail &amp; CRC16</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function updateMetrics() {
+    const successTrx = allTrx.filter(t => t.status === 'success');
+    const pendingTrx = allTrx.filter(t => t.status === 'pending');
+    const totalMasuk = successTrx.reduce((s, t) => s + Number(t.uniqueAmount || 0), 0);
+    const totalPending = pendingTrx.reduce((s, t) => s + Number(t.uniqueAmount || 0), 0);
+    document.getElementById('metricTotalMasuk').textContent = fmtRupiah(totalMasuk);
+    document.getElementById('metricSuccessCount').textContent = successTrx.length + ' transaksi';
+    document.getElementById('metricPending').textContent = fmtRupiah(totalPending);
+    document.getElementById('metricPendingCount').textContent = pendingTrx.length + ' transaksi';
+
+    document.getElementById('countAll').textContent = allTrx.length;
+    document.getElementById('countSuccess').textContent = successTrx.length;
+    document.getElementById('countPending').textContent = pendingTrx.length;
+    document.getElementById('countExpired').textContent = allTrx.filter(t => t.status === 'expired').length;
+  }
+
+  function renderList() {
+    const listEl = document.getElementById('transactionList');
+    listEl.innerHTML = allTrx.map(renderCard).join('');
+    bindCardEvents();
+    applyFilterAndSearch();
+  }
+
+  function bindCardEvents() {
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const str = btn.getAttribute('data-copy');
+        copyText(str).then(() => showToast(`Disalin: ${str}`));
+      });
+    });
+    document.querySelectorAll('.detail-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal(btn.getAttribute('data-trx'));
+      });
+    });
+  }
+
+  function copyText(str) {
+    if (navigator.clipboard) {
+      return navigator.clipboard.writeText(str).catch(() => {});
+    }
+    return Promise.resolve();
+  }
+
+  const searchInput = document.getElementById('trxSearchInput');
+  const clearSearchBtn = document.getElementById('clearSearchBtn');
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const emptyState = document.getElementById('emptySearchState');
+  const resetSearchBtn = document.getElementById('resetSearchBtn');
+
+  function applyFilterAndSearch() {
+    const query = (searchInput.value || '').toLowerCase().trim();
+    const cards = document.querySelectorAll('.trx-card');
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const cardStatus = card.getAttribute('data-status');
+      const cardSearch = (card.getAttribute('data-search') || '').toLowerCase();
+      const matchesFilter = (currentFilter === 'all') || (cardStatus === currentFilter);
+      const matchesSearch = query === '' || cardSearch.includes(query);
+      if (matchesFilter && matchesSearch) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    if (emptyState) {
+      if (visibleCount === 0 && allTrx.length > 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+    }
+    if (clearSearchBtn) {
+      clearSearchBtn.classList.toggle('hidden', query.length === 0);
+    }
+  }
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      chip.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      chip.classList.add('bg-primary', 'text-on-primary');
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilterAndSearch();
+    });
+  });
+
+  if (searchInput) searchInput.addEventListener('input', applyFilterAndSearch);
+  if (clearSearchBtn) clearSearchBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    applyFilterAndSearch();
+    searchInput.focus();
+  });
+  if (resetSearchBtn) resetSearchBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    currentFilter = 'all';
+    filterChips.forEach((c, idx) => {
+      if (idx === 0) {
+        c.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        c.classList.add('bg-primary', 'text-on-primary');
+      } else {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      }
+    });
+    applyFilterAndSearch();
+  });
+
+  // Detail modal
+  const backdrop = document.getElementById('detailModalBackdrop');
+  const sheet = document.getElementById('detailModalSheet');
+  const modalTrxId = document.getElementById('modalTrxId');
+  const modalMerchantName = document.getElementById('modalMerchantName');
+  const modalNmid = document.getElementById('modalNmid');
+  const modalCrc = document.getElementById('modalCrc');
+  const modalPayload = document.getElementById('modalPayload');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const modalActionBtn = document.getElementById('modalActionBtn');
+
+  function openModal(trxId) {
+    const trx = allTrx.find(t => t.orderId === trxId);
+    if (modalTrxId) modalTrxId.textContent = `TRX-ID: ${trxId}`;
+    if (trx) {
+      modalMerchantName.textContent = trx.merchantName || '-';
+      modalNmid.textContent = trx.nmid || '-';
+      modalCrc.textContent = trx.crc ? `0x${trx.crc} (MATCH)` : '-';
+      modalPayload.textContent = trx.payloadPreview || '-';
+    }
+    if (backdrop && sheet) {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      sheet.classList.remove('translate-y-full');
+      sheet.classList.add('translate-y-0');
+    }
+  }
+  function closeModal() {
+    if (backdrop && sheet) {
+      sheet.classList.remove('translate-y-0');
+      sheet.classList.add('translate-y-full');
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+    }
+  }
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (modalActionBtn) modalActionBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeModal(); });
+
+  // Live countdown tick for pending cards
+  setInterval(() => {
+    document.querySelectorAll('.countdown-live').forEach(el => {
+      const expires = Number(el.getAttribute('data-expires'));
+      const diff = Math.max(0, Math.floor((expires - Date.now()) / 1000));
+      const m = String(Math.floor(diff / 60)).padStart(2, '0');
+      const s = String(diff % 60).padStart(2, '0');
+      el.textContent = `${m}:${s}`;
+    });
+  }, 1000);
+
+  // CSV export (data asli dari server)
+  const downloadCsvBtn = document.getElementById('downloadCsvBtn');
+  if (downloadCsvBtn) {
+    downloadCsvBtn.addEventListener('click', () => {
+      showToast('Mengunduh rekap transaksi_qris.csv...');
+      window.location.href = apiUrl('/transactions/export.csv') + '?token=' + encodeURIComponent(getToken() || '');
+    });
+  }
+
+  async function loadTransactions() {
+    try {
+      const data = await apiFetch('/transactions');
+      allTrx = data.transactions || [];
+      updateMetrics();
+      renderList();
+    } catch (err) {
+      showToast('Gagal memuat transaksi: ' + err.message);
+    }
+  }
+
+  loadTransactions();
+  setInterval(loadTransactions, 8000); // refresh berkala biar riwayat selalu real-time
+})();
+</script>
+</body></html>
